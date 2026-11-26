@@ -644,3 +644,204 @@ ul {
   }
 
 }
+
+
+/* =========================================
+   SECCIÓN ARTÍCULOS | J. LÓPEZ
+   CONTROL & TECHNOLOGY
+   ========================================= */
+
+#articulos {
+    position: relative;
+}
+
+#articulos .section-header {
+    margin-bottom: 2.5rem;
+}
+
+#articulos .section-label {
+    display: inline-block;
+    color: var(--gold);
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-size: 0.85rem;
+    margin-bottom: 0.8rem;
+}
+
+#articulos .section-header h2 {
+    margin-bottom: 1rem;
+}
+
+#articulos .section-header p {
+    max-width: 800px;
+    line-height: 1.8;
+}
+
+/* Artículo destacado */
+
+#articulos .article-featured {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(
+        135deg,
+        var(--navy),
+        var(--navy-light)
+    );
+    color: var(--white);
+    border: 1px solid rgba(196, 154, 67, 0.35);
+    border-radius: 16px;
+    padding: 2.5rem;
+    margin-bottom: 3rem;
+    box-shadow: 0 10px 30px rgba(16, 30, 53, 0.12);
+}
+
+#articulos .article-featured::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background: var(--gold);
+}
+
+#articulos .article-featured-content {
+    position: relative;
+    z-index: 1;
+}
+
+#articulos .article-category {
+    display: inline-block;
+    color: var(--gold-light);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+#articulos .article-featured h3 {
+    color: var(--white);
+    font-size: clamp(1.35rem, 3vw, 2rem);
+    line-height: 1.5;
+    margin-bottom: 1.2rem;
+    max-width: 950px;
+}
+
+#articulos .article-excerpt {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 1.05rem;
+    line-height: 1.8;
+    max-width: 850px;
+    margin-bottom: 1.5rem;
+}
+
+#articulos .article-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.88rem;
+    margin-bottom: 1.5rem;
+}
+
+#articulos .article-coming-soon {
+    display: inline-block;
+    border: 1px solid rgba(223, 189, 120, 0.5);
+    border-radius: 30px;
+    padding: 0.65rem 1rem;
+    color: var(--gold-light);
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+/* Categorías editoriales */
+
+#articulos .article-categories {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+}
+
+#articulos .article-category-card {
+    position: relative;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.8rem;
+    transition: transform 0.25s ease,
+                box-shadow 0.25s ease,
+                border-color 0.25s ease;
+}
+
+#articulos .article-category-card::before {
+    content: "";
+    display: block;
+    width: 42px;
+    height: 3px;
+    background: var(--gold);
+    margin-bottom: 1.2rem;
+}
+
+#articulos .article-category-card h3 {
+    color: var(--navy);
+    font-size: 1.15rem;
+    line-height: 1.5;
+    margin-bottom: 0.8rem;
+}
+
+#articulos .article-category-card p {
+    color: var(--gray);
+    line-height: 1.8;
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+#articulos .article-category-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--gold);
+    box-shadow: 0 10px 25px rgba(16, 30, 53, 0.08);
+}
+
+/* Adaptación para tabletas y móviles */
+
+@media (max-width: 850px) {
+
+    #articulos .article-categories {
+        grid-template-columns: 1fr;
+    }
+
+    #articulos .article-featured {
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 600px) {
+
+    #articulos .article-featured {
+        padding: 1.5rem;
+        border-radius: 12px;
+    }
+
+    #articulos .article-featured h3 {
+        font-size: 1.3rem;
+        line-height: 1.5;
+    }
+
+    #articulos .article-excerpt {
+        font-size: 0.95rem;
+    }
+
+    #articulos .article-meta {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    #articulos .article-category-card {
+        padding: 1.4rem;
+    }
+
+    #articulos .article-category-card h3 {
+        font-size: 1.05rem;
+    }
+}
